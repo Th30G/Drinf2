@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultatActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Condamnation"
+                android:textAlignment="viewStart"
+                android:textColor="@color/blue"
+                android:textSize="36sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Amende maximal"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textViewAmende"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="750 €"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Perte de point maximal"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textViewPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="6 points"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Peine de prison maximal"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textViewPrison"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="2 ans"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Votre permis peut faire l'objet d'une suspension"
+                    android:textAlignment="viewStart"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textViewSuspensionPermis"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="OUI"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Votre véhicule est immobilisé"
+                    android:textAlignment="viewStart"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textViewImmobilisation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="OUI"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Vous devez réaliser un stage de sensibilisation"
+                    android:textAlignment="viewStart"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textViewSensibilisation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="OUI"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
