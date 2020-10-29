@@ -27,11 +27,16 @@ public class Condamnation {
         suspensionPermis = false;
         immobilisationVehicule = false;
         stageSensibilisation = false;
-        if (formulaire.getTaux() > 0.2) {
+        if (formulaire.getTaux() >= 0.2) {
             if (formulaire.isProbatoire()) {
                 suspensionPermis = true;
                 amende = 750;
                 immobilisationVehicule = true;
+            } else if (formulaire.getTaux() > 0.5) {
+                immobilisationVehicule = true;
+                suspensionPermis = true;
+                retraitDePoint = 6;
+                amende = 750;
             } else if (formulaire.getTaux() > 0.8) {
                 retraitDePoint = 6;
                 suspensionPermis = true;
