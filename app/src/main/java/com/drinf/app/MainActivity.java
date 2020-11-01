@@ -67,11 +67,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void setTaux(float taux) {
         formulaire.setTaux(taux);
-        if (taux > 0.2) {
+        if (taux >= 0.2 && taux < 0.5) {
             probatoireLayout.setVisibility(View.VISIBLE);
-            changeButtonState(false);
+            recidiveLayout.setVisibility(View.GONE);
+            changeButtonState(true);
             setProbatoire(checkBoxPermisProbatoire.isChecked());
-        } else {
+        } else if (formulaire.getTaux() >= 0.8) {
+            recidiveLayout.setVisibility(View.VISIBLE);
+            probatoireLayout.setVisibility(View.GONE);
+            setRecidive(checkBoxRecidive.isChecked());
+        }
+        else {
             probatoireLayout.setVisibility(View.GONE);
             recidiveLayout.setVisibility(View.GONE);
             changeButtonState(true);
@@ -85,20 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setProbatoire(boolean probatoire) {
         formulaire.setProbatoire(probatoire);
-        if (probatoire) {
-            recidiveLayout.setVisibility(View.GONE);
-            changeButtonState(true);
-        }
-        else {
-            if (formulaire.getTaux() > 0.8) {
-                recidiveLayout.setVisibility(View.VISIBLE);
-                setRecidive(checkBoxRecidive.isChecked());
-            }
-            else {
-                recidiveLayout.setVisibility(View.GONE);
-                changeButtonState(true);
-            }
-        }
+        changeButtonState(true);
     }
 
     public void setRecidive(View view) {

@@ -32,27 +32,24 @@ public class Condamnation {
                 suspensionPermis = true;
                 amende = 750;
                 immobilisationVehicule = true;
-            } else if (formulaire.getTaux() > 0.5) {
+            } else if (formulaire.getTaux() >= 0.5) {
                 immobilisationVehicule = true;
                 suspensionPermis = true;
                 retraitDePoint = 6;
                 amende = 750;
-            } else if (formulaire.getTaux() > 0.8) {
-                retraitDePoint = 6;
-                suspensionPermis = true;
-                immobilisationVehicule = true;
-                stageSensibilisation = true;
-                if (formulaire.isRecidive()) {
-                    amende = 9000;
-                    peinePrison = 4;
-                } else {
-                    amende = 4500;
-                    peinePrison = 2;
+                if (formulaire.getTaux() >= 0.8) {
+                    retraitDePoint = 6;
+                    suspensionPermis = true;
+                    immobilisationVehicule = true;
+                    stageSensibilisation = true;
+                    if (formulaire.isRecidive()) {
+                        amende = 9000;
+                        peinePrison = 4;
+                    } else {
+                        amende = 4500;
+                        peinePrison = 2;
+                    }
                 }
-            } else {
-                amende = 750;
-                immobilisationVehicule = true;
-                retraitDePoint = 6;
             }
         }
     }
