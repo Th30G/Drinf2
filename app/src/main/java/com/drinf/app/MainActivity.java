@@ -118,8 +118,10 @@ public class MainActivity extends AppCompatActivity {
     public void generateResultat() {
         Intent intent = new Intent(this, ResultatActivity.class);
         intent.putExtra("taux", formulaire.getTaux());
-        intent.putExtra("probatoire", formulaire.isProbatoire());
-        intent.putExtra("recidive", formulaire.isRecidive());
+        if (probatoireLayout.getVisibility() == View.VISIBLE) intent.putExtra("probatoire", formulaire.isProbatoire());
+        else intent.putExtra("probatoire", false);
+        if (recidiveLayout.getVisibility() == View.VISIBLE) intent.putExtra("recidive", formulaire.isRecidive());
+        else intent.putExtra("recidive", false);
         startActivity(intent);
     }
 
